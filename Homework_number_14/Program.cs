@@ -8,7 +8,7 @@ namespace Homework_number_14
         {
             char symbol;
             string userName;
-            int numberLettersInName;
+            string middleLine;
 
             Console.Write("Укажите символ, которым будет обведено ваше имя: ");
             symbol = Convert.ToChar(Console.ReadLine());
@@ -16,17 +16,16 @@ namespace Homework_number_14
             Console.Write("Укажите ваше имя: ");
             userName = Console.ReadLine();
 
-            numberLettersInName = userName.Length;
-            numberLettersInName++;
+            middleLine = symbol + userName + symbol;
 
-            for (int i = 0; i <= numberLettersInName; i++)
+            for (int i = 0; i < middleLine.Length; i++)
             {
                 Console.Write(symbol);
             }
 
-            Console.Write($"\n{symbol}{userName}{symbol}\n");
+            Console.Write($"\n{middleLine}\n");
 
-            for (int i = 0; i <= numberLettersInName; i++)
+            for (int i = 0; i < middleLine.Length; i++)
             {
                 Console.Write(symbol);
             }
