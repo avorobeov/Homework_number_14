@@ -9,7 +9,7 @@ namespace Homework_number_14
             char symbol;
             string userName;
             string middleLine = "";
-            string horizontalLine = "";
+            string border = "";
 
             Console.Write("Укажите символ, которым будет обведено ваше имя: ");
             symbol = Convert.ToChar(Console.ReadLine());
@@ -21,10 +21,10 @@ namespace Homework_number_14
 
             for (int i = 0; i < middleLine.Length; i++)
             {
-                horizontalLine += symbol;
+                border += symbol;
             }
 
-            Console.WriteLine($"{horizontalLine}\n{middleLine}\n{horizontalLine}");
+            Console.WriteLine($"{border}\n{middleLine}\n{border}");
         }
     }
 }
