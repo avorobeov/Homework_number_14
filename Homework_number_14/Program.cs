@@ -6,29 +6,28 @@ namespace Homework_number_14
     {
         static void Main(string[] args)
         {
+            bool isLineCorrect = false;
             char symbol;
             string userName;
-            string middleLine;
-
+            string middLeLine = "";
+            string horizontalLine = "";
+           
             Console.Write("Укажите символ, которым будет обведено ваше имя: ");
             symbol = Convert.ToChar(Console.ReadLine());
 
             Console.Write("Укажите ваше имя: ");
             userName = Console.ReadLine();
 
-            middleLine = symbol + userName + symbol;
 
-            for (int i = 0; i < middleLine.Length; i++)
+            middLeLine = symbol + userName + symbol;
+
+            for (int i = 0; i < middLeLine.Length; i++)
             {
-                Console.Write(symbol);
+                horizontalLine += symbol;
             }
 
-            Console.Write($"\n{middleLine}\n");
+            Console.WriteLine($"{horizontalLine}\n{middLeLine}\n{horizontalLine}");
 
-            for (int i = 0; i < middleLine.Length; i++)
-            {
-                Console.Write(symbol);
-            }
         }
     }
 }
